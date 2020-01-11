@@ -21,6 +21,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" multiple cursors in neovim
+Plug 'terryma/vim-multiple-cursors'
+
 call plug#end()
 
 let g:loaded_python_provider = 0
@@ -105,3 +108,27 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
 
 "let g:indentguides_spacechar = '┆'
 let g:indentguides_tabchar = '┆'
+
+
+function! Multiple_cursors_before()
+  if exists(':YouCompleteMeLock')==2
+    exe 'YouCompleteMeLock'
+  endif
+endfunction
+
+function! Multiple_cursors_after()
+  if exists(':YouCompleteMeUnlock')==2
+    exe 'YouCompleteMe'
+  endif
+endfunction
+
+let g:multi_cursor_use_default_mapping=0
+" Default mapping
+let g:multi_cursor_start_word_key      = '<C-d>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-d>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-d>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
