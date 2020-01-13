@@ -11,6 +11,7 @@ using namespace std;
 #include <functional>
 using namespace __gnu_pbds;
 typedef long long int ll;
+typedef unsigned long long int ull;
 typedef tree<int, null_type, less<int>, rb_tree_tag,
 			tree_order_statistics_node_update> ordered_set;
 
@@ -40,6 +41,7 @@ inline int two(int n) { return 1 << n; }
 inline int test_bit(int n, int b) { return (n>>b)&1; }
 inline void set_bit(int & n, int b) { n |= two(b); }
 inline void unset_bit(int & n, int b) { n &= ~two(b); }
+$1
 endsnippet
 
 
@@ -47,6 +49,7 @@ snippet init_sort_loop "compressed loops for cpp"
 #define REP(i,n) for(int i=0;i<(n);i++)
 #define FOR(i,a,b) for(int i=(a);i<=(b);i++)
 #define FORD(i,a,b) for(int i=(a);i>=(b);i--)
+$1
 endsnippet
 
 
@@ -54,6 +57,7 @@ snippet init_sort_scan "sort form to take input via scan in cpp"
 #define SCN(n) scanf("%d",&n)
 #define SCNLL(n) scanf("%lld",&n)
 #define SCN2(n,m) scanf("%d%d",&n,&m)
+$1
 endsnippet
 
 
