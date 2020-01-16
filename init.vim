@@ -23,6 +23,7 @@ Plug 'honza/vim-snippets'
 
 " multiple cursors in neovim
 Plug 'terryma/vim-multiple-cursors'
+"Plug 'severin-lemaignan/vim-minimap'
 
 call plug#end()
 
@@ -45,6 +46,9 @@ set guicursor=
 set guicursor=a:blinkon100
 "" searching in vim
 set incsearch
+set cursorline
+set signcolumn=yes
+
 nnoremap <C-s> :split term://bash<CR>
 
 
@@ -96,10 +100,17 @@ let g:SuperTabCrMapping                = 0
 let g:UltiSnipsExpandTrigger           = '<tab>'
 let g:UltiSnipsJumpForwardTrigger      = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+
+
+"ycm settings
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_global_ycm_extra_conf = '~/.config/nvim/.ycm_extra_conf.py'
 let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 set completeopt-=preview
-
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 " `my_snippets` is the directory we created before
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
@@ -132,3 +143,26 @@ let g:multi_cursor_next_key            = '<C-d>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+
+highlight LineNr ctermfg=grey ctermbg=234
+
+"hi clear CursorLine
+"augroup CLClear
+"    autocmd! ColorScheme * hi clear CursorLine
+"augroup END
+"
+"hi CursorLineNR cterm=bold
+"augroup CLNRSet
+"    autocmd! ColorScheme * hi CursorLineNR cterm=bold
+"augroup END
+
+
+" tab bar coloring
+hi TabLineFill ctermfg=234 ctermbg=234
+hi TabLine ctermfg=black ctermbg=grey
+hi TabLineSel ctermfg=black ctermbg=DarkBlue
+hi Title ctermfg=DarkRed ctermbg=grey
+
+
+"let g:airline#extensions#tabline#enabled = 1
