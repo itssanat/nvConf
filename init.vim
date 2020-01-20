@@ -5,7 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'tmhedberg/SimpylFold'
 Plug 'morhetz/gruvbox'
@@ -14,7 +14,12 @@ Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'Yggdroot/indentLine'
 Plug 'thaerkh/vim-indentguides'
 
+"Plug 'Townk/vim-autoclose'
+Plug 'cohama/lexima.vim'  " auto complete
+
 Plug 'tpope/vim-fugitive'
+
+Plug 'preservim/nerdcommenter'
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -166,3 +171,13 @@ hi Title ctermfg=DarkRed ctermbg=grey
 
 
 "let g:airline#extensions#tabline#enabled = 1
+let g:AutoPairsFlyMode = 0
+
+" NERDCommenter
+nmap // <leader>c<space>
+""vmap // <leader>cs
+let g:NERDDefaultAlign = 'left'
+let g:NERDSpaceDelims = 1
+nmap <C-/> <leader>cu
+
+
