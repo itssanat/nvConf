@@ -79,6 +79,9 @@ let NERDTreeWinPos="left"
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeAutoDeleteBuffer=1
+let NERDTreeMapOpenInTab='t'
+autocmd VimEnter * NERDTree
+autocmd BufWinEnter * NERDTreeMirror
 
 
 
