@@ -7,6 +7,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 Plug 'tmhedberg/SimpylFold'
 Plug 'morhetz/gruvbox'
 Plug 'Valloric/YouCompleteMe'
@@ -29,6 +32,11 @@ Plug 'honza/vim-snippets'
 " multiple cursors in neovim
 Plug 'terryma/vim-multiple-cursors'
 "Plug 'severin-lemaignan/vim-minimap'
+
+" powerline theme
+"Plug 'vim-airline/vim-airline-themes'
+" show file icon
+" Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -53,7 +61,7 @@ set guicursor=a:blinkon100
 set incsearch
 set cursorline
 set signcolumn=yes
-
+set encoding=utf8
 nnoremap <C-s> :split term://bash<CR>
 
 
@@ -182,5 +190,43 @@ nmap // <leader>c<space>
 let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
 nmap <C-/> <leader>cu
+
+
+set guifont=DroidSansMono\ Nerd\ Font\ 11
+" set macligatures
+" set guifont=Fira\ Code:h12
+" airline theme
+let g:airline_theme='simple'
+
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
 
 
