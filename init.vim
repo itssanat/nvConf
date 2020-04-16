@@ -68,6 +68,7 @@ xnoremap d "_d
 xnoremap p "_dP
 
 
+
 " adding color scheme
 colo gruvbox
 let g:gruvbox_italic='1'
