@@ -14,8 +14,8 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'morhetz/gruvbox'
 Plug 'Valloric/YouCompleteMe'
 Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'Yggdroot/indentLine'
-Plug 'thaerkh/vim-indentguides'
+Plug 'Yggdroot/indentLine'
+" Plug 'thaerkh/vim-indentguides'
 
 "Plug 'Townk/vim-autoclose'
 Plug 'cohama/lexima.vim'  " auto complete
@@ -46,10 +46,11 @@ let g:python3_host_prog = '/home/itssanat/anaconda3/bin/python3'
 
 
 "" general setting
-set nu
+set rnu
 set ai
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set ls=2
 set autoindent
 set background=dark
@@ -152,7 +153,12 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
 
 
 "let g:indentguides_spacechar = '┆'
-let g:indentguides_tabchar = '┆'
+" let g:indentguides_tabchar = '┆'
+" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_color_term=239 
+" let g:indentLine_setColors = 0
+let g:indentLine_char='┊'
+
 
 
 function! Multiple_cursors_before()

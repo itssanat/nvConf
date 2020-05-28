@@ -7,8 +7,9 @@ using namespace std;
 typedef long long int ll;
 typedef unsigned long long int ull;
 
-#define DEBUG(x) cout <<">>"<<#x<<": "<<(x)<< endl;
-#define DEBUG2(x,y) cout<<#x<<" :: "<<x<<"    "<<#y<<" :: "<<y<<endl;
+#define DEBUG(x) cout <<">>"<<#x<<"::"<<(x)<< endl;
+#define DEBUG2(x,y) cout<<#x<<"::"<<x<<"    "<<#y<<"::"<<y<<endl;
+#define DEBUG3(x,y,z) cout<<#x<<"::"<<x<<"   "<<#y<<"::"<<y<<"   "<<#z<<"::"<<z<<endl;
 #define boost ios::sync_with_stdio(0); cin.tie(0)
 #define mem(x,val) memset((x),(val),sizeof(x))
 #define pii pair<int,int>
@@ -16,7 +17,9 @@ typedef unsigned long long int ull;
 #define se second
 #define pb push_back
 #define mp make_pair
+#define all(a) a.begin(),a.end()
 const ll INF = 2e18;
+const ll mod = 1e9+7;
 /**************************************************************************/
 
 int main()
@@ -96,4 +99,45 @@ void sieve(){
         }
     }
 }
+endsnippet
+
+
+snippet init_kick "used for kick start" 
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef long long int ll;
+typedef unsigned long long int ull;
+
+#define DEBUG(x) cout <<">>"<<#x<<": "<<(x)<< endl;
+#define DEBUG2(x,y) cout<<#x<<" :: "<<x<<"    "<<#y<<" :: "<<y<<endl;
+#define print(x,y) cout<<"Case #"<<x<<": "<<y<<endl;
+#define boost ios::sync_with_stdio(0); cin.tie(0)
+#define mem(x,val) memset((x),(val),sizeof(x))
+#define pii pair<int,int>
+#define fi first
+#define se second
+#define pb push_back
+#define mp make_pair
+const ll INF = 2e18;
+/**************************************************************************/
+
+int main(int argc, char *argv[])
+{
+	boost;
+	int t; cin>>t;
+	for(int tc=1; tc<=t; tc++){
+		$1
+	}
+	return 0;
+}
 endsnippet 
+
+
+snippet init_modProd "product and sum with mod with mod"
+template<class T> T prodMod(T a, T b){return ((a%mod)*(b%mod))%mod;}
+template<class T> T sumMod(T a, T b){return ((a%mod)+(b%mod))%mod;}
+$1
+endsnippet
+
+
